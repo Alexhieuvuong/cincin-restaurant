@@ -60,5 +60,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-Your Name - your.email@example.com
-Project Link: https://github.com/yourusername/cincin-restaurant 
+Hieu Vuong - hieuvuongforwork@gmail.com
+Project Link: https://github.com/Alexhieuvuong/cincin-restaurant 

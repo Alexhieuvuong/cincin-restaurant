@@ -1,0 +1,855 @@
+/* Starbucks Clone CSS Reset */
+:root {
+  --color-white: #fff;
+  --color-black: #0a0001;
+  --color-blue: #0070d2;
+  --color-green: #006241;
+  --color-primary: #006241;
+  --color-red: #d62b1f;
+  --color-success: var(--color-green);
+  --color-danger: var(--color-red);
+  --color-light-blue: #7ed0ee;
+  --color-grey1: #f9f9f9;
+  --color-grey2: #eee;
+  --color-grey3: #ccc;
+  --color-grey4: #999;
+  --color-grey5: #666;
+  --color-grey6: #444;
+  --color-grey7: #222;
+  --color-grey8: #333;
+  --color-grey-transparent-1: rgba(0, 0, 0, 65%);
+  --color-grey-transparent-2: rgba(0, 0, 0, 25%);
+  --color-light-gray: var(--color-grey1);
+  --color-slightly-darker-gray: var(--color-grey4);
+  --color-dark-gray: var(--color-grey6);
+  --color-darker-gray: var(--color-grey7);
+  --color-horizontal-rule-grey: var(--color-grey3);
+  --color-product-number-grey: var(--color-grey3);
+  --color-horizontal-border-grey: var(--color-grey4);
+  --color-menu-link: var(--color-black);
+  --color-close-menu-bg: var(--color-grey2);
+  --color-link-color: var(--color-black);
+  --color-hr-border-color: var(--color-grey3);
+  --skin-background-color-1: var(--color-white);
+  --skin-border-color-1: #8C8984;
+  --skin-main-text-color-1: var(--color-grey7);
+  --skin-main-text-color-2: var(--color-grey7);
+  --skin-menu-color-1: var(--color-black);
+  --skin-menu-color-1-invert: var(--color-black);
+  --skin-menu-color-2: var(--color-green);
+  --skin-link-color-1: var(--color-black);
+  --skin-link-color-2: var(--color-green);
+  --skin-primary-color-1: var(--color-primary);
+  --skin-primary-color-2: var(--color-primary);
+  --skin-primary-color-invert-1: var(--color-white);
+  --skin-selectbox-background-color-1: var(--color-white);
+  --skin-selectbox-text-color-1: var(--skin-main-text-color-1);
+  --skin-banner-background-color-1: var(--color-white);
+  --skin-banner-background-color-2: var(--color-green);
+  --skin-banner-text-color-1: var(--color-white);
+  --skin-heading-color-1: var(--color-primary);
+  --skin-heading-color-1-invert: var(--color-white);
+  --skin-price-1: var(--color-grey7);
+  --skin-header-font: "SoDo Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --skin-body-font: "SoDo Sans", "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+html, body {
+  font-family: var(--skin-body-font);
+  background: var(--color-white);
+  color: var(--color-black);
+  margin: 0;
+  padding: 0;
+}
+body { font-size: 18px; line-height: 1.6; }
+
+/* Remove all box, border, and shadow styles */
+*, *:before, *:after {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Navigation */
+header, .navbar {
+  background: var(--color-white);
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1.5px solid #e3e3e3;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  padding: 0 48px;
+}
+.logo-text {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: var(--color-green);
+  margin-left: 12px;
+  letter-spacing: 1px;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+}
+.main-nav a {
+  color: var(--color-black);
+  text-decoration: none;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 4px 0;
+  border-bottom: 3px solid transparent;
+  transition: border 0.2s;
+}
+.main-nav a.active, .main-nav a:hover {
+  border-bottom: 3px solid var(--color-green);
+}
+.utility-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.location-group {
+  display: flex;
+  align-items: center;
+  background: #f4f8f6;
+  border-radius: 20px;
+  padding: 4px 14px 4px 10px;
+  margin-right: 10px;
+}
+.location-group i {
+  color: var(--color-green);
+  margin-right: 6px;
+  font-size: 1.1rem;
+}
+#nav-location {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+  width: 120px;
+  color: var(--color-green);
+}
+.btn, .btn-join, .btn-signin {
+  border-radius: 999px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  padding: 12px 32px;
+  border: 2px solid var(--color-green);
+  background: var(--color-white);
+  color: var(--color-green);
+  transition: background 0.2s, color 0.2s;
+  text-transform: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+.btn-join {
+  background: var(--color-green);
+  color: var(--color-white);
+  border: 2px solid var(--color-green);
+}
+.btn-join:hover, .btn:hover {
+  background: var(--color-white);
+  color: var(--color-green);
+}
+.btn-signin:hover {
+  background: #f4f8f6;
+}
+
+/* Hero Section */
+.hero-full-bleed {
+  width: 100vw;
+  min-height: 520px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: url('../images/creme-brulee-promo.jpg') center center/cover no-repeat;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.hero-full-bleed::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(40,50,40,0.32);
+  z-index: 1;
+}
+.hero-full-bleed > div {
+  position: relative;
+  z-index: 2;
+  padding: 80px 7vw 80px 7vw;
+  max-width: 700px;
+  text-align: left;
+}
+.hero-full-bleed h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--color-white);
+  line-height: 1.08;
+  margin-bottom: 22px;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+.hero-full-bleed p {
+  font-size: 1.35rem;
+  color: var(--color-white);
+  margin-bottom: 38px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  max-width: 520px;
+}
+.hero-full-bleed .btn {
+  font-size: 1.18rem;
+  padding: 16px 48px;
+  font-weight: 800;
+  border: 2px solid var(--color-white);
+  background: var(--color-white);
+  color: var(--color-green);
+}
+.hero-full-bleed .btn:hover {
+  background: var(--color-green);
+  color: var(--color-white);
+}
+
+/* Featured Foods Section */
+.products {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.products-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  min-height: 400px;
+  width: 100%;
+  margin-bottom: 64px;
+}
+.products-row.reverse { flex-direction: row-reverse; }
+.products-img {
+  flex: 1 1 50%;
+  min-width: 320px;
+  height: 400px;
+  background: var(--color-white);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+.products-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.products-info {
+  flex: 1 1 50%;
+  min-width: 320px;
+  height: 400px;
+  background: var(--color-green);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 32px;
+}
+.products-info-inner {
+  max-width: 340px;
+}
+.products-info h2 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--color-white);
+}
+.products-info p {
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+  color: var(--color-white);
+}
+.products-info .price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #FFD600;
+}
+.products-info .btn {
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  background: transparent;
+  font-weight: 700;
+  font-size: 1.08rem;
+}
+.products-info .btn:hover {
+  background: var(--color-white);
+  color: var(--color-green);
+}
+.products-menu-row {
+  width: 100%;
+  background: var(--color-green);
+  padding: 48px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+.products-menu-row .btn {
+  font-size: 1.18rem;
+  padding: 13px 44px;
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  background: transparent;
+  font-weight: 700;
+}
+.products-menu-row .btn:hover {
+  background: var(--color-white);
+  color: var(--color-green);
+}
+
+/* How It Works Section */
+.how-it-works {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  background: var(--color-white);
+  padding: 80px 0 60px 0;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.how-it-works h2 {
+  color: var(--color-black);
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 2.3rem;
+  font-weight: 900;
+}
+.how-it-works-desc {
+  text-align: center;
+  color: #444;
+  font-size: 1.15rem;
+  margin-bottom: 48px;
+}
+.how-steps {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 64px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.how-step {
+  flex: 1 1 220px;
+  min-width: 200px;
+  text-align: center;
+}
+.how-step-circle {
+  width: 48px;
+  height: 48px;
+  border: 2px solid var(--color-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px auto;
+  font-size: 1.3rem;
+  color: var(--color-green);
+  font-weight: 700;
+}
+.how-step-title {
+  font-weight: 700;
+  color: var(--color-black);
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+.how-step-desc {
+  color: var(--color-black);
+  font-size: 1rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  background: var(--color-white);
+  padding: 60px 0 40px 0;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.testimonials h2 {
+  color: var(--color-black);
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 900;
+  margin-bottom: 32px;
+}
+.testimonials-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 64px;
+}
+.testimonial {
+  background: transparent;
+  min-width: 220px;
+  max-width: 340px;
+  text-align: center;
+  padding: 0 12px;
+}
+.testimonial-name {
+  font-weight: 700;
+  color: var(--color-black);
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+.testimonial-text {
+  font-size: 1.1rem;
+  color: var(--color-black);
+  margin-bottom: 12px;
+}
+.testimonial-stars {
+  color: #FFD600;
+  font-size: 1.2rem;
+}
+
+/* Modern Starbucks Footer - Compact Horizontal Design */
+footer {
+  width: 100%;
+  background: #1e3932;
+  color: #fff;
+  margin-top: 40px;
+  padding: 0;
+  font-family: "SoDo Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 32px 30px;
+}
+
+.footer-content-modern {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 30px;
+  margin-bottom: 30px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  padding-bottom: 25px;
+}
+
+.footer-col {
+  padding-right: 20px;
+  position: relative;
+}
+
+.footer-col:not(:last-child):after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; height: 100%; width: 1px;
+  background: rgba(255,255,255,0.10);
+  display: block;
+}
+
+.footer-col h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-col.main-info {
+  max-width: 400px;
+  padding-right: 30px;
+}
+
+.footer-col.main-info p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #e6e6e6;
+  margin-bottom: 15px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-contact a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+  opacity: 0.92;
+}
+
+.footer-contact a:hover {
+  color: #b6f5c6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  opacity: 0.92;
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: #b6f5c6;
+  opacity: 1;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: #1e3932;
+  background: #fff;
+}
+
+.newsletter-form button {
+  padding: 10px 14px;
+  background: #b6f5c6;
+  color: #1e3932;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.newsletter-form button:hover {
+  background: #fff;
+  color: #1e3932;
+}
+
+.footer-bottom-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-payment-section {
+  margin: 0;
+  order: 1;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 12px;
+}
+
+.payment-methods i {
+  font-size: 22px;
+  color: #b6f5c6;
+  opacity: 0.95;
+}
+
+.footer-social-section {
+  margin: 0;
+  order: 2;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 18px;
+  opacity: 0.92;
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.social-links a:hover {
+  color: #b6f5c6;
+  opacity: 1;
+}
+
+.footer-legal {
+  margin: 0;
+  order: 3;
+}
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+}
+
+.legal-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  opacity: 0.92;
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.legal-links a:hover {
+  color: #b6f5c6;
+  opacity: 1;
+}
+
+.footer-bottom {
+  text-align: right;
+  color: #b6f5c6;
+  font-size: 0.85rem;
+  opacity: 0.85;
+  order: 4;
+  flex-basis: 100%;
+  margin-top: 15px;
+}
+
+@media (max-width: 1100px) {
+  .footer-content-modern {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+  
+  .footer-col.main-info {
+    grid-column: 1 / -1;
+    max-width: 100%;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-container {
+    padding: 25px 16px 20px;
+  }
+  
+  .footer-content-modern {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 15px;
+  }
+  
+  .footer-col {
+    padding-right: 0;
+  }
+  
+  .footer-col:not(:last-child):after {
+    display: none;
+  }
+  
+  .footer-bottom-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .legal-links {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-content-modern {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .navbar { padding: 0 18px; }
+  .main-nav { gap: 18px; }
+  .products-row, .testimonials-row, .how-steps { gap: 24px; }
+}
+@media (max-width: 900px) {
+  .navbar { flex-direction: column; height: auto; padding: 10px 0; }
+  .main-nav { margin: 10px 0 0 0; }
+  .utility-nav { margin-top: 10px; }
+  .hero-full-bleed, .products, .how-it-works, .testimonials, footer {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+  }
+  .products-row, .testimonials-row, .how-steps, .footer-container { flex-direction: column; gap: 32px; }
+  .section-title, .how-it-works h2, .testimonials h2 { margin-bottom: 24px !important; }
+}
+@media (max-width: 600px) {
+  .section-title, .how-it-works h2, .testimonials h2 { font-size: 1.5rem; }
+  .hero-full-bleed h1 { font-size: 2rem !important; }
+  .hero-full-bleed > div { padding: 24px 2vw 24px 2vw !important; }
+  .products-row, .testimonials-row, .how-steps, .footer-container { gap: 16px; }
+  .section-title, .how-it-works h2, .testimonials h2 { margin-bottom: 14px !important; }
+}
+
+/* Starbucks Card Style - Green Card on White BG */
+.starbucks-card {
+  max-width: 1200px;
+  background: var(--color-green);
+  border-radius: 28px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  padding: 64px 48px;
+  margin: 64px auto;
+  position: relative;
+  color: var(--color-white);
+}
+.starbucks-card .starbucks-card-title,
+.starbucks-card .starbucks-card-desc,
+.starbucks-card .how-step-title,
+.starbucks-card .how-step-desc,
+.starbucks-card .testimonial-name,
+.starbucks-card .testimonial-text {
+  color: var(--color-white) !important;
+}
+.starbucks-card .price { color: #FFD600 !important; }
+.starbucks-card-btn {
+  display: inline-block;
+  padding: 13px 44px;
+  border-radius: 999px;
+  border: 2px solid var(--color-white);
+  color: var(--color-green);
+  background: var(--color-white);
+  font-weight: 700;
+  font-size: 1.18rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 18px;
+}
+.starbucks-card-btn:hover {
+  background: transparent;
+  color: var(--color-white);
+}
+.starbucks-card-split {
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+  gap: 0;
+}
+.starbucks-card-split .starbucks-card-img {
+  flex: 1 1 50%;
+  height: 400px;
+  overflow: hidden;
+  border-top-left-radius: 28px;
+  border-bottom-left-radius: 28px;
+}
+.starbucks-card-split.reverse .starbucks-card-img {
+  border-radius: 0 28px 28px 0;
+}
+.starbucks-card-split .starbucks-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.starbucks-card-split .starbucks-card-content {
+  flex: 1 1 50%;
+  padding: 0 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.starbucks-card-split.reverse .starbucks-card-content {
+  align-items: flex-end;
+  text-align: right;
+}
+.starbucks-card .starbucks-card-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--color-black);
+  margin-bottom: 18px;
+  text-align: left;
+}
+.starbucks-card .starbucks-card-desc {
+  font-size: 1.25rem;
+  color: var(--color-black);
+  margin-bottom: 32px;
+}
+.starbucks-card .starbucks-card-btn {
+  display: inline-block;
+  padding: 13px 44px;
+  border-radius: 999px;
+  border: 2px solid var(--color-green);
+  color: var(--color-green);
+  background: var(--color-white);
+  font-weight: 700;
+  font-size: 1.18rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 18px;
+}
+.starbucks-card .starbucks-card-btn:hover {
+  background: transparent;
+  color: var(--color-white);
+}
+.starbucks-card .testimonial-name,
+.starbucks-card .testimonial-text {
+  color: var(--color-black) !important;
+}
+@media (max-width: 900px) {
+  .starbucks-card { padding: 32px 10px; margin: 32px auto; }
+  .starbucks-card-split { flex-direction: column; min-height: 0; }
+  .starbucks-card-split .starbucks-card-img, .starbucks-card-split.reverse .starbucks-card-img {
+    border-radius: 28px 28px 0 0 !important;
+    width: 100%;
+    height: 220px;
+  }
+  .starbucks-card-split .starbucks-card-content, .starbucks-card-split.reverse .starbucks-card-content {
+    padding: 24px 0;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+@media (max-width: 600px) {
+  .starbucks-card { padding: 12px 2px; margin: 16px auto; }
+  .starbucks-card .starbucks-card-title { font-size: 1.3rem; }
+  .starbucks-card .starbucks-card-desc { font-size: 1rem; }
+  .starbucks-card-btn { font-size: 1rem; padding: 10px 18px; }
+} 
